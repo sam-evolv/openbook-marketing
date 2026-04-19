@@ -33,10 +33,10 @@ export default function Footer() {
           </div>
           <div className="footer-col">
             <h5>Legal</h5>
-            <a href="#">Terms</a>
-            <a href="#">Privacy</a>
-            <a href="#">DPA</a>
-            <a href="#">Cookies</a>
+            <a href="/terms">Terms</a>
+            <a href="/privacy">Privacy</a>
+            <a href="/dpa">DPA</a>
+            <a href="/cookies">Cookies</a>
           </div>
         </div>
         <div className="footer-bottom">
