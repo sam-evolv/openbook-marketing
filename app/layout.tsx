@@ -1,5 +1,9 @@
 import './globals.css';
 import type { Metadata } from 'next';
+import { GeistSans } from 'geist/font/sans';
+import { Fraunces } from 'next/font/google';
+
+const fraunces = Fraunces({ subsets: ['latin'], variable: '--font-fraunces', display: 'swap' });
 
 export const metadata: Metadata = {
   title: 'OpenBook — Your booking page, live in 15 minutes',
@@ -14,7 +18,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${GeistSans.variable} ${fraunces.variable}`}>
       <body>{children}</body>
     </html>
   );
