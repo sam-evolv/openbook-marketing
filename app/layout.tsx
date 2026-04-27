@@ -1,16 +1,25 @@
+import './globals.css';
+import type { Metadata } from 'next';
 import { GeistSans } from 'geist/font/sans';
 import { Fraunces } from 'next/font/google';
 
 const fraunces = Fraunces({ subsets: ['latin'], variable: '--font-fraunces', display: 'swap' });
 
-export const metadata = { title: 'OpenBook', description: 'Your booking page, live in 15 minutes.' };
+export const metadata: Metadata = {
+  title: 'OpenBook — Your booking page, live in 15 minutes',
+  description:
+    'OpenBook is the AI-first booking platform for Irish service businesses. Your booking page live in 15 minutes, and discoverable by ChatGPT, Claude and Gemini.',
+  openGraph: {
+    title: 'OpenBook — Your booking page, live in 15 minutes',
+    description:
+      'AI-first booking for Irish gyms, salons, barbers, physios and spas. Live in 15 minutes, discoverable by every major AI.',
+  },
+};
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${GeistSans.variable} ${fraunces.variable}`}>
-      <body style={{ margin: 0, background: '#000', color: '#fff', fontFamily: 'var(--font-geist-sans), -apple-system, BlinkMacSystemFont, Inter, sans-serif' }}>
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
   );
 }
