@@ -25,7 +25,7 @@ export default function Nav() {
           <a href="#faq">FAQ</a>
         </div>
         <div className="nav-cta">
-          <a href="https://app.openbook.ie/login" className="btn-text">Sign in</a>
+          <a href="https://app.openbook.ie/onboard" className="btn-text">Sign in</a>
           <a href="https://app.openbook.ie/onboard" className="btn btn-primary">Get started</a>
         </div>
       </div>
