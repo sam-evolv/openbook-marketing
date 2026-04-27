@@ -152,7 +152,7 @@ export default function Hero() {
             Your booking page, live in 15 minutes. Customers tap, pick a slot, pay. You show up. Zero commission, zero chasing.
           </p>
           <div className="hero-ctas fade-up" style={{ animationDelay: '0.95s' }}>
-            <a href="#" className="btn btn-primary">Get your page live <span>→</span></a>
+            <a href="https://app.openbook.ie/onboard" className="btn btn-primary">Get your page live <span>→</span></a>
             <a href="#consumer" className="btn btn-ghost">See the consumer app</a>
           </div>
           <div className="hero-meta fade-up" style={{ animationDelay: '1.1s' }}>

@@ -14,7 +14,7 @@ export default function Nav() {
   return (
     <nav className={'nav' + (scrolled ? ' scrolled' : '')}>
       <div className="container nav-inner">
-        <a href="#" className="logo" aria-label="OpenBook">
+        <a href="/" className="logo" aria-label="OpenBook">
           <span className="logo-mark">O</span>
           <span>OpenBook</span>
         </a>
@@ -25,8 +25,8 @@ export default function Nav() {
           <a href="#faq">FAQ</a>
         </div>
         <div className="nav-cta">
-          <a href="#" className="btn-text">Sign in</a>
-          <a href="#" className="btn btn-primary">Get started</a>
+          <a href="https://app.openbook.ie/login" className="btn-text">Sign in</a>
+          <a href="https://app.openbook.ie/onboard" className="btn btn-primary">Get started</a>
         </div>
       </div>
     </nav>
