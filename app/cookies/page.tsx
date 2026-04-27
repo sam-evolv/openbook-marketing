@@ -129,7 +129,7 @@ export default function CookiesPage() {
 
       <h2>7. Contact</h2>
 
-      <p>Cookie questions: <a href="mailto:sam@evolvai.ie">sam@evolvai.ie</a></p>
+      <p>Cookie questions: <a href="mailto:sam@openhouseai.ie">sam@openhouseai.ie</a></p>
 
       <hr />
 

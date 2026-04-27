@@ -21,7 +21,7 @@ export default function TermsPage() {
       <ul>
         <li><strong>Trading name:</strong> OpenBook</li>
         <li><strong>Registered office:</strong> Ballinvarosig, Carrigaline, Co. Cork, Ireland</li>
-        <li><strong>Contact:</strong> <a href="mailto:sam@evolvai.ie">sam@evolvai.ie</a></li>
+        <li><strong>Contact:</strong> <a href="mailto:sam@openhouseai.ie">sam@openhouseai.ie</a></li>
         <li><strong>Website:</strong> <a href="http://openbook.ie">openbook.ie</a></li>
       </ul>
 
@@ -52,7 +52,7 @@ export default function TermsPage() {
 
       <h2>5. Your account</h2>
 
-      <p><strong>Both groups.</strong> You&apos;re responsible for keeping your sign-in details secure. We use Google Sign-In, Apple Sign-In, or magic-link email for authentication — there are no passwords for you to manage. If you think someone else has access to your account, email us immediately at <a href="mailto:sam@evolvai.ie">sam@evolvai.ie</a>.</p>
+      <p><strong>Both groups.</strong> You&apos;re responsible for keeping your sign-in details secure. We use Google Sign-In, Apple Sign-In, or magic-link email for authentication — there are no passwords for you to manage. If you think someone else has access to your account, email us immediately at <a href="mailto:sam@openhouseai.ie">sam@openhouseai.ie</a>.</p>
 
       <p>You&apos;re responsible for all activity on your account. If something happens through your account that breaches these Terms, we&apos;ll treat it as if you did it.</p>
 
@@ -70,7 +70,7 @@ export default function TermsPage() {
 
       <p>Stripe processing fees are never refundable in any scenario — Stripe keeps them whether the booking proceeds or not. This is Stripe&apos;s policy, not ours.</p>
 
-      <p><strong>Disputes.</strong> If you have a problem with a service you received (or didn&apos;t receive), contact the business first. If you can&apos;t resolve it, email us at <a href="mailto:sam@evolvai.ie">sam@evolvai.ie</a> and we&apos;ll try to help mediate. As a last resort you can dispute the charge with your bank — but please try us first; bank disputes (chargebacks) are slow and stressful for everyone.</p>
+      <p><strong>Disputes.</strong> If you have a problem with a service you received (or didn&apos;t receive), contact the business first. If you can&apos;t resolve it, email us at <a href="mailto:sam@openhouseai.ie">sam@openhouseai.ie</a> and we&apos;ll try to help mediate. As a last resort you can dispute the charge with your bank — but please try us first; bank disputes (chargebacks) are slow and stressful for everyone.</p>
 
       <p><strong>Refunds for cancelled or rescheduled bookings by the business.</strong> If a business cancels your booking, you&apos;ll get a full refund (including processing fees) automatically, normally within 5–10 business days.</p>
 
@@ -165,7 +165,7 @@ export default function TermsPage() {
 
       <p>For anything to do with these Terms, account issues, or general support:</p>
 
-      <p><strong>Email:</strong> <a href="mailto:sam@evolvai.ie">sam@evolvai.ie</a><br />
+      <p><strong>Email:</strong> <a href="mailto:sam@openhouseai.ie">sam@openhouseai.ie</a><br />
       <strong>Post:</strong> OpenHouse AI Limited, Ballinvarosig, Carrigaline, Co. Cork, Ireland</p>
 
       <p>For data protection matters specifically, see our Privacy Policy.</p>

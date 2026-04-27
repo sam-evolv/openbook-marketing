@@ -14,7 +14,7 @@ export default function PrivacyPage() {
 
       <ul>
         <li><strong>Registered office:</strong> Ballinvarosig, Carrigaline, Co. Cork, Ireland</li>
-        <li><strong>Data contact:</strong> <a href="mailto:sam@evolvai.ie">sam@evolvai.ie</a></li>
+        <li><strong>Data contact:</strong> <a href="mailto:sam@openhouseai.ie">sam@openhouseai.ie</a></li>
       </ul>
 
       <h2>1. Who this policy covers</h2>
@@ -295,7 +295,7 @@ export default function PrivacyPage() {
         <li><strong>Lodge a complaint</strong> — with the Irish Data Protection Commission (<a href="http://dataprotection.ie">dataprotection.ie</a>) if you think we&apos;ve handled your data wrongly.</li>
       </ul>
 
-      <p>To exercise any of these, email <a href="mailto:sam@evolvai.ie">sam@evolvai.ie</a>. We&apos;ll respond within 30 days.</p>
+      <p>To exercise any of these, email <a href="mailto:sam@openhouseai.ie">sam@openhouseai.ie</a>. We&apos;ll respond within 30 days.</p>
 
       <h2>9. Security</h2>
 
@@ -314,7 +314,7 @@ export default function PrivacyPage() {
 
       <h2>10. Children</h2>
 
-      <p>OpenBook is not intended for users under 16. We don&apos;t knowingly collect data from anyone under 16. If you believe we&apos;ve inadvertently collected such data, email <a href="mailto:sam@evolvai.ie">sam@evolvai.ie</a> and we&apos;ll delete it.</p>
+      <p>OpenBook is not intended for users under 16. We don&apos;t knowingly collect data from anyone under 16. If you believe we&apos;ve inadvertently collected such data, email <a href="mailto:sam@openhouseai.ie">sam@openhouseai.ie</a> and we&apos;ll delete it.</p>
 
       <h2>11. International users</h2>
 
@@ -326,7 +326,7 @@ export default function PrivacyPage() {
 
       <h2>13. Contact</h2>
 
-      <p><strong>Data queries:</strong> <a href="mailto:sam@evolvai.ie">sam@evolvai.ie</a><br />
+      <p><strong>Data queries:</strong> <a href="mailto:sam@openhouseai.ie">sam@openhouseai.ie</a><br />
       <strong>Post:</strong> OpenHouse AI Limited, Ballinvarosig, Carrigaline, Co. Cork, Ireland</p>
 
       <p><strong>Supervisory authority (Ireland):</strong><br />
