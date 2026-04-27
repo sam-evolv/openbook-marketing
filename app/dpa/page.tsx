@@ -112,7 +112,7 @@ export default function DpaPage() {
         <li><strong>Rectification</strong> — you can edit customer records directly</li>
       </ul>
 
-      <p>If you need OpenBook&apos;s help to fulfil a request you can&apos;t handle from the dashboard, email <a href="mailto:sam@evolvai.ie">sam@evolvai.ie</a>.</p>
+      <p>If you need OpenBook&apos;s help to fulfil a request you can&apos;t handle from the dashboard, email <a href="mailto:sam@openhouseai.ie">sam@openhouseai.ie</a>.</p>
 
       <h2>9. Personal data breaches</h2>
 
@@ -143,7 +143,7 @@ export default function DpaPage() {
 
       <p>If a tax/accounting record retention requirement applies (e.g. transaction records the Revenue Commissioners may need), the relevant records may be retained longer in accordance with Irish tax law.</p>
 
-      <p>You can request earlier deletion of specific Customer Data at any time by deleting it from your dashboard or by emailing <a href="mailto:sam@evolvai.ie">sam@evolvai.ie</a>.</p>
+      <p>You can request earlier deletion of specific Customer Data at any time by deleting it from your dashboard or by emailing <a href="mailto:sam@openhouseai.ie">sam@openhouseai.ie</a>.</p>
 
       <h2>12. International transfers</h2>
 
@@ -151,7 +151,7 @@ export default function DpaPage() {
 
       <h2>13. Audits</h2>
 
-      <p>You can request reasonable information about OpenBook&apos;s data processing practices once per year, by writing to <a href="mailto:sam@evolvai.ie">sam@evolvai.ie</a>. As a small operator, we don&apos;t currently support on-site audits, but we&apos;ll provide written responses to reasonable questions and share any third-party security reports we have.</p>
+      <p>You can request reasonable information about OpenBook&apos;s data processing practices once per year, by writing to <a href="mailto:sam@openhouseai.ie">sam@openhouseai.ie</a>. As a small operator, we don&apos;t currently support on-site audits, but we&apos;ll provide written responses to reasonable questions and share any third-party security reports we have.</p>
 
       <h2>14. Liability</h2>
 
@@ -173,7 +173,7 @@ export default function DpaPage() {
 
       <p>For DPA-related queries:</p>
 
-      <p><strong>Email:</strong> <a href="mailto:sam@evolvai.ie">sam@evolvai.ie</a><br />
+      <p><strong>Email:</strong> <a href="mailto:sam@openhouseai.ie">sam@openhouseai.ie</a><br />
       <strong>Post:</strong> OpenHouse AI Limited, Ballinvarosig, Carrigaline, Co. Cork, Ireland</p>
 
       <hr />
