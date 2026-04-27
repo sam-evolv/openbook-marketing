@@ -14,7 +14,7 @@ export default function BuiltInIreland() {
             <p className="small">
               Every feature exists because a real Irish business asked for it. Cork-based. Operator-grade.
             </p>
-            <a href="#" className="ireland-link">See it running on openbook.ie →</a>
+            <a href="https://app.openbook.ie" className="ireland-link">See it running on openbook.ie →</a>
           </div>
         </Reveal>
       </div>

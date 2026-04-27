@@ -2,6 +2,7 @@ import Reveal from './Reveal';
 
 type Plan = {
   tier: string;
+  tierSlug: string;
   price: string;
   sub: string;
   featured?: boolean;
@@ -12,6 +13,7 @@ type Plan = {
 const PLANS: Plan[] = [
   {
     tier: 'Free',
+    tierSlug: 'free',
     price: '€0',
     sub: 'per month',
     features: ['Your booking page', 'Up to 2 services', 'Email confirmations', 'Basic dashboard', 'Calendar sync'],
@@ -19,6 +21,7 @@ const PLANS: Plan[] = [
   },
   {
     tier: 'Growth',
+    tierSlug: 'growth',
     price: '€0',
     sub: '+ 2% on card payments',
     featured: true,
@@ -34,6 +37,7 @@ const PLANS: Plan[] = [
   },
   {
     tier: 'Pro',
+    tierSlug: 'pro',
     price: '€39',
     sub: 'flat per month',
     features: [
@@ -81,7 +85,7 @@ export default function Pricing() {
                     </div>
                   ))}
                 </div>
-                <a href="#" className={'btn ' + (p.featured ? 'btn-primary' : 'btn-ghost')}>{p.cta}</a>
+                <a href={`https://app.openbook.ie/onboard?tier=${p.tierSlug}`} className={'btn ' + (p.featured ? 'btn-primary' : 'btn-ghost')}>{p.cta}</a>
               </div>
             </Reveal>
           ))}
