@@ -7,7 +7,7 @@ export const metadata = {
 
 export default function TermsPage() {
   return (
-    <LegalLayout title="Terms of Service" effective="27 April 2026" version="1.0">
+    <LegalLayout title="Terms of Service" effective="8 May 2026" version="1.1">
       <p>These Terms govern your use of OpenBook. By creating an account, listing a business, or making a booking, you agree to them. If you don&apos;t agree, please don&apos;t use the service.</p>
 
       <p>We&apos;ve written these in plain English. Where we&apos;ve had to use a legal term, we&apos;ve tried to explain it. We&apos;re not a law firm and these aren&apos;t intended to mislead anyone — they&apos;re a working agreement between us, the businesses on our platform, and the consumers who book with them.</p>
@@ -57,6 +57,8 @@ export default function TermsPage() {
       <p>You&apos;re responsible for all activity on your account. If something happens through your account that breaches these Terms, we&apos;ll treat it as if you did it.</p>
 
       <h2>6. Bookings, cancellations and refunds</h2>
+
+      <p><strong>Bookings made through an AI assistant.</strong> If you ask an AI assistant (ChatGPT, Claude, Gemini, or another) to book a service for you, the assistant acts as your agent — we treat the booking as your booking, made with your consent. You are responsible for confirming the details the assistant proposes before payment. If an assistant books on your behalf without your consent, contact us and the business immediately and we will work with you to resolve it. We log assistant-mediated bookings with a source identifier so we can trace anomalies if needed.</p>
 
       <p><strong>Consumers.</strong> When you book a service, you&apos;re entering a contract with the business — not with OpenBook. The business is responsible for delivering the service. We&apos;re responsible for processing the booking and the payment.</p>
 
@@ -113,6 +115,8 @@ export default function TermsPage() {
       <p>Pro businesses are surfaced through OpenBook&apos;s MCP server (<a href="http://mcp.openbook.ie">mcp.openbook.ie</a>), which makes their services queryable by AI assistants like ChatGPT, Claude, and Gemini. By choosing the Pro tier, you authorise us to share your business name, services, prices, location and live availability with these third-party AI services for the purpose of helping consumers discover and book your services.</p>
 
       <p>If you don&apos;t want this, downgrade to Growth or Free, where AI distribution is not included.</p>
+
+      <p>Detailed field-level disclosure of what data flows through the MCP server is in our Privacy Policy, Section 6.</p>
 
       <h2>11. Intellectual property</h2>
 
@@ -174,7 +178,7 @@ export default function TermsPage() {
 
       <div className="legal-footer-note">
         <p><em>OpenHouse AI Limited, trading as OpenBook. Registered in Ireland.</em></p>
-        <p><em>This document is version 1.0, effective 27 April 2026.</em></p>
+        <p><em>This document is version 1.1, effective 8 May 2026.</em></p>
       </div>
     </LegalLayout>
   );

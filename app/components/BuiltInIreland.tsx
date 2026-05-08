@@ -12,7 +12,7 @@ export default function BuiltInIreland() {
               It was built because booking a session at a local gym or salon in 2026 should not require Instagram DMs, phone calls, or a marketplace taking a cut of every transaction.
             </p>
             <p className="small">
-              Every feature exists because a real Irish business asked for it. Cork-based. Operator-grade.
+              Every feature exists because a real Irish business asked for it.
             </p>
             <a href="https://app.openbook.ie" className="ireland-link">See it running on openbook.ie →</a>
           </div>

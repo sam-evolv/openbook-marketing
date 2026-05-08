@@ -7,7 +7,7 @@ export const metadata = {
 
 export default function PrivacyPage() {
   return (
-    <LegalLayout title="Privacy Policy" effective="27 April 2026" version="1.0">
+    <LegalLayout title="Privacy Policy" effective="8 May 2026" version="1.1">
       <p>This Privacy Policy explains what personal data OpenBook collects, why we collect it, how long we keep it, and what rights you have over it. We&apos;ve written it to be readable, not just compliant.</p>
 
       <p>OpenBook is operated by <strong>OpenHouse AI Limited</strong> (&ldquo;we&rdquo;, &ldquo;us&rdquo;), an Irish company. We are the data controller for the personal data described in this policy.</p>
@@ -219,14 +219,47 @@ export default function PrivacyPage() {
             <td>WhatsApp messages, phone numbers</td>
             <td>US (under SCCs)</td>
           </tr>
+          <tr>
+            <td>AI assistants (ChatGPT, Claude, Gemini, others)</td>
+            <td>Pull public business data via our MCP server</td>
+            <td>Business name, services, prices, live availability, location</td>
+            <td>Global; queries originate from each provider</td>
+          </tr>
         </tbody>
       </table>
+
+      <p>AI assistants are not sub-processors in the strict GDPR sense — they query our public MCP server rather than processing data on our behalf. We&apos;ve included them in this table so you can see where business-level data flows out of OpenBook. The MCP integration is a Pro-tier feature; businesses on Free or Growth tiers are not included in MCP responses.</p>
 
       <p>We do <strong>not</strong> sell, rent, or share your data with advertisers, data brokers, or anyone else not listed above.</p>
 
       <p>For US-based sub-processors (Stripe, Resend, OpenAI, Meta), data transfers are protected by Standard Contractual Clauses (SCCs) approved by the European Commission. This is the legal mechanism under GDPR for sending personal data outside the EEA.</p>
 
-      <h2>6. AI and your data</h2>
+      <h2>6. How the OpenBook MCP server shares data with AI assistants</h2>
+
+      <p>OpenBook operates a public MCP (Model Context Protocol) server at <a href="http://mcp.openbook.ie">mcp.openbook.ie</a>. AI assistants like ChatGPT, Claude, and Gemini query this server when their users ask to find or book a service. This section explains exactly what data each tool exposes, so you can decide whether to enable AI distribution (Pro-tier feature; off by default on Free and Growth).</p>
+
+      <p>The MCP server is anonymous-first — assistants do not authenticate to use it. Anyone, including bad actors, can query the server. The data exposed has therefore been designed to be safe-by-default to share publicly:</p>
+
+      <p><strong>Tools that read public business data only:</strong></p>
+
+      <ul>
+        <li><strong>search_businesses, get_business_info, get_availability, get_promoted_inventory:</strong> return business name, slug, category, location summary (city), services with names, durations and prices, opening hours, public ratings and review count, and recent review highlights (already redacted of any reviewer-identifying detail).</li>
+      </ul>
+
+      <p><strong>Tools that touch a specific user&apos;s data:</strong></p>
+
+      <ul>
+        <li><strong>hold_and_checkout:</strong> when a user (via their assistant) wants to book, they may pass their name, email, phone, and a short note in &lsquo;customer_hints&rsquo;. We use these to pre-fill the checkout form and to identify the user if they ask the assistant to follow up. The hints are stored on the booking row only after the user actually completes the booking on our checkout page.</li>
+        <li><strong>check_booking_status:</strong> returns the booking&apos;s status, and if the booking is confirmed, returns the email address the user entered at checkout (so the assistant can confirm to the user). This is the only field across all tools where user PII flows back to the calling assistant. Users who do not want this disclosed should ask their assistant to forget the booking after confirmation.</li>
+        <li><strong>join_waitlist:</strong> the user provides email/phone to be notified when a slot opens. We store these on the waitlist row. Notifications are sent by us (via Resend for email; SMS deferred to a future release) and not by the assistant.</li>
+        <li><strong>record_post_booking_feedback:</strong> the user&apos;s verbatim words and rating are stored on the booking. This data is never shared with the assistant beyond a short acknowledgement message.</li>
+      </ul>
+
+      <p><strong>Logging:</strong> we keep a server-side log of MCP queries for operational and analytics purposes. The log includes the query text (e.g. &lsquo;haircut in Dublin tomorrow&rsquo;), the identifier of the calling assistant if known, the businesses returned, and a timestamp. We do not log the customer_hints payload of hold_and_checkout. Logs are retained for 90 days and are not shared with third parties.</p>
+
+      <p><strong>Caching:</strong> to keep response times fast and costs predictable, we cache the output of our intent classifier (which uses OpenAI to interpret natural-language queries) for 24 hours. The cache is keyed on the canonicalised query text. The cache contains query text only — no user-identifying information.</p>
+
+      <h2>7. AI and your data</h2>
 
       <p>This deserves its own section because people ask.</p>
 
@@ -234,10 +267,10 @@ export default function PrivacyPage() {
         <li><strong>OpenAI</strong> is used for AI insights (analysing your business&apos;s anonymised aggregated data to surface &ldquo;you have 3 empty slots Friday — try a flash sale&rdquo;) and the AI assistant. We send OpenAI <strong>summaries and aggregates</strong>, not raw customer records.</li>
         <li><strong>OpenAI does not train on data sent through their API</strong>, per their published API data policy. We do not opt into any &ldquo;improve our models&rdquo; setting.</li>
         <li><strong>We never use your data, your customers&apos; data, or anyone&apos;s bookings to train our own AI models.</strong> We don&apos;t have AI models — we use third-party APIs.</li>
-        <li>The MCP server (Pro tier, <a href="http://mcp.openbook.ie">mcp.openbook.ie</a>) shares <strong>business-level data</strong> (your name, services, prices, live availability, location) with AI assistants like ChatGPT, Claude, and Gemini. It never shares customer data or bookings.</li>
+        <li>See Section 6 for a complete description of how the OpenBook MCP server shares data.</li>
       </ul>
 
-      <h2>7. How long we keep your data</h2>
+      <h2>8. How long we keep your data</h2>
 
       <table>
         <thead>
@@ -280,7 +313,7 @@ export default function PrivacyPage() {
 
       <p>When you ask us to delete your data, we delete it from our active systems within 30 days, and from backups within a further 30 days. We may retain records we&apos;re legally required to keep (tax records, fraud investigations).</p>
 
-      <h2>8. Your rights</h2>
+      <h2>9. Your rights</h2>
 
       <p>Under GDPR you have the right to:</p>
 
@@ -297,7 +330,7 @@ export default function PrivacyPage() {
 
       <p>To exercise any of these, email <a href="mailto:sam@openhouseai.ie">sam@openhouseai.ie</a>. We&apos;ll respond within 30 days.</p>
 
-      <h2>9. Security</h2>
+      <h2>10. Security</h2>
 
       <p>We protect data with:</p>
 
@@ -312,19 +345,19 @@ export default function PrivacyPage() {
 
       <p>If we ever discover a personal data breach, we&apos;ll notify the Irish DPC within 72 hours and tell affected users without undue delay, as required by GDPR.</p>
 
-      <h2>10. Children</h2>
+      <h2>11. Children</h2>
 
       <p>OpenBook is not intended for users under 16. We don&apos;t knowingly collect data from anyone under 16. If you believe we&apos;ve inadvertently collected such data, email <a href="mailto:sam@openhouseai.ie">sam@openhouseai.ie</a> and we&apos;ll delete it.</p>
 
-      <h2>11. International users</h2>
+      <h2>12. International users</h2>
 
       <p>OpenBook is targeted at the Irish market. If you&apos;re using it from outside Ireland (e.g. a tourist booking an Irish service), the same protections apply — your data is still hosted in the EU.</p>
 
-      <h2>12. Changes to this policy</h2>
+      <h2>13. Changes to this policy</h2>
 
       <p>If we change this policy in a material way, we&apos;ll email you and show the changes at openbook.ie/privacy with a new effective date. Minor wording fixes won&apos;t trigger a notification.</p>
 
-      <h2>13. Contact</h2>
+      <h2>14. Contact</h2>
 
       <p><strong>Data queries:</strong> <a href="mailto:sam@openhouseai.ie">sam@openhouseai.ie</a><br />
       <strong>Post:</strong> OpenHouse AI Limited, Ballinvarosig, Carrigaline, Co. Cork, Ireland</p>
@@ -338,7 +371,7 @@ export default function PrivacyPage() {
 
       <div className="legal-footer-note">
         <p><em>OpenHouse AI Limited, trading as OpenBook. Registered in Ireland.</em></p>
-        <p><em>This document is version 1.0, effective 27 April 2026.</em></p>
+        <p><em>This document is version 1.1, effective 8 May 2026.</em></p>
       </div>
     </LegalLayout>
   );
