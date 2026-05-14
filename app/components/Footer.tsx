@@ -5,7 +5,7 @@ export default function Footer() {
         <div className="footer-top">
           <div className="footer-brand">
             <a href="/" className="logo">
-              <span className="logo-mark">O</span>
+              <img src="/brand/ob-monogram.png" alt="" className="logo-mark" width={24} height={24} />
               <span>OpenBook</span>
             </a>
             <p className="tag">Your business, on every channel customers use.</p>
