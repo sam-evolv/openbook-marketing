@@ -4,7 +4,7 @@ module.exports = {
     return [
       {
         source:
-          '/:slug((?!features|pricing|faq|blog|cookies|dpa|privacy|terms|api|_next|static|assets|images|fonts|favicon|robots|sitemap).+)',
+          '/:slug((?!features|pricing|faq|blog|cookies|dpa|privacy|terms|api|_next|static|assets|images|fonts|icons|brand|favicon|robots|sitemap).+)',
         destination: 'https://app.openbook.ie/business/:slug',
         permanent: false,
         has: [
