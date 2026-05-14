@@ -72,9 +72,11 @@ section{position:relative}
 .eyebrow{display:inline-flex;align-items:center;gap:8px;padding:7px 14px;border-radius:999px;background:rgba(212,175,55,0.08);border:1px solid rgba(212,175,55,0.2);font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:0.1em;color:var(--gold);text-transform:uppercase;margin-bottom:28px}
 .eyebrow-dot{width:6px;height:6px;border-radius:50%;background:var(--gold);box-shadow:0 0 8px var(--gold);animation:pulse 2s ease-in-out infinite}
 @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.5;transform:scale(0.8)}}
-.hero h1{font-family:var(--serif);font-weight:500;font-size:clamp(44px,5.5vw,78px);line-height:1.02;letter-spacing:-0.035em;margin-bottom:24px}
+.hero h1{font-family:var(--serif);font-weight:500;font-size:clamp(38px,5.2vw,74px);line-height:1.04;letter-spacing:-0.035em;margin-bottom:24px;text-wrap:balance}
 .hero h1 .gold{font-style:italic;font-weight:400;color:#e8c547;white-space:nowrap;text-shadow:0 0 30px rgba(212,175,55,0.3)}
-.hero-sub{font-size:19px;line-height:1.55;color:var(--text-2);max-width:540px;margin-bottom:36px;text-wrap:pretty}
+.hero-sub{font-size:18px;line-height:1.55;color:var(--text-2);max-width:560px;margin-bottom:36px;text-wrap:pretty}
+.hero-sub-strong{color:var(--text-1);font-weight:600;display:inline}
+@media(max-width:560px){.hero h1{font-size:34px;line-height:1.06}.hero-sub{font-size:16.5px}}
 .hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:28px}
 @media(max-width:960px){.hero-ctas{justify-content:center}.hero-sub{margin-left:auto;margin-right:auto}}
 .hero-meta{display:inline-flex;gap:18px;flex-wrap:wrap;font-family:var(--mono);font-size:10.5px;letter-spacing:0.12em;color:var(--text-3);text-transform:uppercase}
@@ -422,6 +424,57 @@ section{position:relative}
 .footer-social a,.footer-social span{width:32px;height:32px;border-radius:50%;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;color:var(--text-3);transition:all 200ms var(--ease)}
 .footer-social a:hover{color:var(--gold);border-color:rgba(212,175,55,0.4)}
 @media(max-width:600px){.footer-bottom{flex-direction:column;gap:18px;text-align:center}}
+
+/* ====== AI DISTRIBUTION — Siri tab accent ====== */
+.ai-tab-siri{--tab-accent:#c9c4b8}
+
+/* ====== WORKS ALONGSIDE ====== */
+.alongside{padding:120px 0 100px;border-top:1px solid var(--line)}
+.alongside .section-head{margin-bottom:56px}
+.alongside-row{max-width:980px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:22px}
+.alongside-label{font-family:var(--mono);font-size:10.5px;font-weight:500;letter-spacing:0.18em;color:var(--text-3);text-transform:uppercase}
+.alongside-logos{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:14px 36px}
+.alongside-logo{font-family:var(--serif);font-style:italic;font-weight:400;font-size:22px;color:rgba(183,179,168,0.42);letter-spacing:-0.01em;padding:8px 4px;transition:color 250ms var(--ease);cursor:default;white-space:nowrap}
+.alongside-logo:hover{color:rgba(243,240,232,0.7)}
+@media(max-width:680px){.alongside-logos{gap:10px 22px}.alongside-logo{font-size:18px}}
+
+/* ====== COMMISSION COMPARE ====== */
+.compare{padding:120px 0;background:linear-gradient(180deg,transparent,rgba(212,175,55,0.02),transparent)}
+.compare .section-head{margin-bottom:56px}
+.compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:1000px;margin:0 auto}
+@media(max-width:780px){.compare-grid{grid-template-columns:1fr;max-width:520px}}
+.compare-card{padding:36px 32px 32px;border-radius:18px;border:1px solid var(--line);background:linear-gradient(180deg,rgba(22,22,26,0.5),rgba(12,12,14,0.5));position:relative;display:flex;flex-direction:column;min-height:340px}
+.compare-them{opacity:0.78}
+.compare-us{border:1px solid rgba(212,175,55,0.4);background:linear-gradient(180deg,rgba(212,175,55,0.06),rgba(22,22,26,0.6));box-shadow:0 0 40px rgba(212,175,55,0.06),0 20px 40px rgba(0,0,0,0.3)}
+.compare-ribbon{position:absolute;top:-11px;left:24px;padding:5px 12px;border-radius:999px;background:var(--gold-gradient);color:var(--black);font-family:var(--mono);font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase}
+.compare-tier{font-family:var(--mono);font-size:11px;letter-spacing:0.15em;color:var(--text-3);text-transform:uppercase;margin-bottom:18px}
+.compare-us .compare-tier{color:var(--gold)}
+.compare-price{display:flex;align-items:baseline;gap:10px;margin-bottom:24px;flex-wrap:wrap}
+.compare-num{font-family:var(--serif);font-weight:500;font-size:54px;letter-spacing:-0.03em;line-height:1;color:var(--text-1)}
+.compare-us .compare-num{color:var(--gold);text-shadow:0 0 30px rgba(212,175,55,0.25)}
+.compare-unit{font-size:13.5px;line-height:1.4;color:var(--text-2);max-width:230px}
+.compare-list{list-style:none;padding:0;margin:0 0 22px;display:flex;flex-direction:column;gap:9px}
+.compare-list li{font-size:13.5px;line-height:1.45;color:var(--text-2);padding-left:18px;position:relative}
+.compare-list li::before{content:'·';position:absolute;left:6px;top:-2px;color:var(--text-3);font-size:18px;line-height:1}
+.compare-us .compare-list li::before{color:var(--gold)}
+.compare-foot{margin-top:auto;padding-top:18px;border-top:1px solid var(--line);font-size:13.5px;line-height:1.5;color:var(--text-2)}
+.compare-foot b{color:var(--text-1);font-weight:600}
+.compare-us .compare-foot{border-top-color:rgba(212,175,55,0.18)}
+.compare-foot.strong{color:var(--text-1)}
+.compare-foot.strong b{color:var(--gold)}
+.compare-note{text-align:center;margin-top:36px;max-width:680px;margin-left:auto;margin-right:auto;font-size:12.5px;line-height:1.55;color:var(--text-3);font-style:italic;font-family:var(--serif)}
+
+/* ====== PRICING — price period + headline ====== */
+.price-amount .price-period{font-family:var(--sans);font-style:normal;font-size:15px;font-weight:400;color:var(--text-3);letter-spacing:0;margin-left:4px}
+.price-headline{text-align:center;margin:48px auto 14px;max-width:720px;font-family:var(--serif);font-size:clamp(18px,2.2vw,22px);line-height:1.45;color:var(--text-1);text-wrap:balance}
+
+/* ====== PRICING HERO (dedicated page) ====== */
+.pricing-hero{padding:140px 0 60px;position:relative;overflow:hidden}
+.pricing-hero-inner{text-align:center;max-width:740px;margin:0 auto;position:relative;z-index:2}
+.pricing-hero .eyebrow{margin:0 auto 24px;display:inline-flex}
+.pricing-hero-title{font-family:var(--serif);font-weight:500;font-size:clamp(40px,5vw,72px);line-height:1.05;letter-spacing:-0.035em;margin-bottom:20px;text-wrap:balance}
+.pricing-hero-title .gold{font-style:italic;font-weight:400;color:#e8c547;text-shadow:0 0 30px rgba(212,175,55,0.3)}
+.pricing-hero-sub{font-size:18px;line-height:1.55;color:var(--text-2);max-width:560px;margin:0 auto;text-wrap:pretty}
 
 /* ====== REDUCED MOTION ====== */
 @media (prefers-reduced-motion: reduce){

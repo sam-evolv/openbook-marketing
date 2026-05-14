@@ -6,13 +6,13 @@ import { Fraunces } from 'next/font/google';
 const fraunces = Fraunces({ subsets: ['latin'], variable: '--font-fraunces', display: 'swap' });
 
 export const metadata: Metadata = {
-  title: 'OpenBook — Your booking page, live in 15 minutes',
+  title: 'OpenBook — Your business, on every channel customers use.',
   description:
-    'OpenBook is the AI-first booking platform for Irish service businesses. Your booking page live in 15 minutes, and discoverable by ChatGPT, Claude and Gemini.',
+    'A distribution layer + website builder that works alongside your booking system. A beautiful website, an app icon, white-label WhatsApp bookings, and AI distribution through ChatGPT, Claude and Siri. €79/month. No commission, ever.',
   openGraph: {
-    title: 'OpenBook — Your booking page, live in 15 minutes',
+    title: 'OpenBook — Your business, on every channel customers use.',
     description:
-      'AI-first booking for Irish gyms, salons, barbers, physios and spas. Live in 15 minutes, discoverable by every major AI.',
+      'Website, app icon, WhatsApp bookings and AI distribution for Irish service businesses. Works alongside whatever booking system you already use. €79/month, no commission.',
   },
 };
 

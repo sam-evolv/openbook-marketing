@@ -15,41 +15,45 @@ const PLANS: Plan[] = [
     tier: 'Free',
     tierSlug: 'free',
     price: '€0',
-    sub: 'per month',
-    features: ['Your booking page', 'Up to 2 services', 'Email confirmations', 'Basic dashboard', 'Calendar sync'],
-    cta: 'Start free',
-  },
-  {
-    tier: 'Growth',
-    tierSlug: 'growth',
-    price: '€0',
-    sub: '+ 2% on card payments',
-    featured: true,
+    sub: 'forever',
     features: [
-      'Unlimited services',
-      'Stripe card payments',
-      'Consumer app icon',
-      'Automated reminders',
-      'Waitlist',
-      'Packages & credits',
+      'Booking page on openbook.ie/[slug]',
+      '2 services',
+      'Manual booking management',
+      'No card payments',
     ],
-    cta: 'Start on Growth',
+    cta: 'Start free',
   },
   {
     tier: 'Pro',
     tierSlug: 'pro',
     price: '€39',
-    sub: 'flat per month',
+    sub: 'per month',
     features: [
-      'Everything in Growth',
-      'Zero transaction fees',
-      'WhatsApp bookings',
-      'AI business insights',
-      'Flash sales',
-      'AI distribution (MCP)',
-      'Priority support',
+      'Everything in Free',
+      'Unlimited services',
+      'Stripe card payments (no transaction fees from us)',
+      'Automated reminders',
+      'AI dashboard insights',
+      'Discoverable through ChatGPT, Claude, Siri (MCP distribution)',
     ],
     cta: 'Go Pro',
+  },
+  {
+    tier: 'Complete',
+    tierSlug: 'complete',
+    price: '€79',
+    sub: 'per month · first month free',
+    featured: true,
+    features: [
+      'Everything in Pro',
+      'Your own website (custom domain supported, published in 15 minutes)',
+      'App icon on customer home screens (iOS PWA)',
+      'White-label WhatsApp booking bot (registered under your business name)',
+      'Flash sales + waitlist tools',
+      'First month free',
+    ],
+    cta: 'Start Complete — first month free',
   },
 ];
 
@@ -63,7 +67,7 @@ export default function Pricing() {
         >
           <Reveal>
             <div className="section-eyebrow">Pricing</div>
-            <h2 className="section-title">Start free. Scale when the <span className="gold">bookings do.</span></h2>
+            <h2 className="section-title">One flat fee. <span className="gold">Never a cut.</span></h2>
           </Reveal>
         </div>
 
@@ -73,7 +77,7 @@ export default function Pricing() {
               <div className={'price-card' + (p.featured ? ' featured' : '')}>
                 {p.featured && <div className="price-ribbon">Most popular</div>}
                 <div className="price-tier">{p.tier}</div>
-                <div className="price-amount">{p.price}</div>
+                <div className="price-amount">{p.price}<span className="price-period">/month</span></div>
                 <div className="price-sub">{p.sub}</div>
                 <div className="price-features">
                   {p.features.map((f, j) => (
@@ -90,7 +94,9 @@ export default function Pricing() {
             </Reveal>
           ))}
         </div>
-        <div className="price-note">First month free on Pro · Zero charges to end customers — ever.</div>
+
+        <div className="price-headline">No booking commission. Ever. Whatever your customers spend, you keep. We&apos;re never taking a cut of your revenue.</div>
+        <div className="price-note">No credit card required to start · Cancel anytime · Built in Ireland</div>
       </div>
     </section>
   );

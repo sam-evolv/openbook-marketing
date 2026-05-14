@@ -72,7 +72,7 @@ export default function PrivacyPage() {
             <td>Generated as your customers book</td>
           </tr>
           <tr>
-            <td>WhatsApp number and conversation history (if Pro tier)</td>
+            <td>WhatsApp number and conversation history (if Complete tier)</td>
             <td>To run the WhatsApp bot for you</td>
             <td>Generated when customers message you</td>
           </tr>
@@ -209,18 +209,18 @@ export default function PrivacyPage() {
           </tr>
           <tr>
             <td>OpenAI</td>
-            <td>AI insights, AI assistant features (Pro tier)</td>
+            <td>AI insights, AI assistant features (Pro and Complete tiers)</td>
             <td>Aggregated booking data; never raw customer data</td>
             <td>US (under SCCs); no model training on your data</td>
           </tr>
           <tr>
             <td>Meta (WhatsApp Cloud API)</td>
-            <td>WhatsApp bot (Pro tier, opt-in)</td>
+            <td>WhatsApp bot (Complete tier, opt-in)</td>
             <td>WhatsApp messages, phone numbers</td>
             <td>US (under SCCs)</td>
           </tr>
           <tr>
-            <td>AI assistants (ChatGPT, Claude, Gemini, others)</td>
+            <td>AI assistants (ChatGPT, Claude, Siri, others)</td>
             <td>Pull public business data via our MCP server</td>
             <td>Business name, services, prices, live availability, location</td>
             <td>Global; queries originate from each provider</td>
@@ -228,7 +228,7 @@ export default function PrivacyPage() {
         </tbody>
       </table>
 
-      <p>AI assistants are not sub-processors in the strict GDPR sense — they query our public MCP server rather than processing data on our behalf. We&apos;ve included them in this table so you can see where business-level data flows out of OpenBook. The MCP integration is a Pro-tier feature; businesses on Free or Growth tiers are not included in MCP responses.</p>
+      <p>AI assistants are not sub-processors in the strict GDPR sense — they query our public MCP server rather than processing data on our behalf. We&apos;ve included them in this table so you can see where business-level data flows out of OpenBook. The MCP integration is included on Pro and Complete; businesses on the Free tier are not included in MCP responses.</p>
 
       <p>We do <strong>not</strong> sell, rent, or share your data with advertisers, data brokers, or anyone else not listed above.</p>
 
@@ -236,7 +236,7 @@ export default function PrivacyPage() {
 
       <h2>6. How the OpenBook MCP server shares data with AI assistants</h2>
 
-      <p>OpenBook operates a public MCP (Model Context Protocol) server at <a href="http://mcp.openbook.ie">mcp.openbook.ie</a>. AI assistants like ChatGPT, Claude, and Gemini query this server when their users ask to find or book a service. This section explains exactly what data each tool exposes, so you can decide whether to enable AI distribution (Pro-tier feature; off by default on Free and Growth).</p>
+      <p>OpenBook operates a public MCP (Model Context Protocol) server at <a href="http://mcp.openbook.ie">mcp.openbook.ie</a>. AI assistants like ChatGPT, Claude, and Siri query this server when their users ask to find or book a service. This section explains exactly what data each tool exposes, so you can decide whether to enable AI distribution (Pro and Complete tiers; off by default on Free).</p>
 
       <p>The MCP server is anonymous-first — assistants do not authenticate to use it. Anyone, including bad actors, can query the server. The data exposed has therefore been designed to be safe-by-default to share publicly:</p>
 

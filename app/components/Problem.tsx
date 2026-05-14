@@ -2,22 +2,22 @@ import Reveal from './Reveal';
 
 export default function Problem() {
   const tags = [
-    'Phone calls to book',
-    'Instagram DMs',
-    'Paper appointment books',
-    'No-shows with no reminder',
-    'Marketplaces taking 20%',
-    'Facebook Messenger bookings',
-    'No app of your own',
-    'Chasing payment after the session',
+    'Customers DM-ing on Instagram',
+    'No app icon on their phone',
+    'No website beyond a Linktree',
+    'No WhatsApp option',
+    'AI assistants pointing elsewhere',
+    'Phone tag during sessions',
+    'No-shows without reminders',
+    'Chasing payment after the fact',
   ];
   return (
     <section className="section problem">
       <div className="container">
         <Reveal>
-          <div className="section-eyebrow" style={{ justifyContent: 'center' }}>The old way</div>
+          <div className="section-eyebrow" style={{ justifyContent: 'center' }}>The gap we close</div>
           <h2 className="section-title" style={{ maxWidth: 760, margin: '0 auto 12px' }}>
-            What you are <span className="gold">replacing.</span>
+            Where customers <span className="gold">slip through.</span>
           </h2>
         </Reveal>
         <Reveal delay={120}>

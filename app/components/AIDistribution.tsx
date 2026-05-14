@@ -44,17 +44,17 @@ const AI_TABS: AITab[] = [
     ],
   },
   {
-    id: 'gemini',
-    name: 'Gemini',
-    color: '#4285f4',
-    bg: 'linear-gradient(135deg,#4285f4,#9333ea)',
-    letter: 'G',
+    id: 'siri',
+    name: 'Siri',
+    color: '#c9c4b8',
+    bg: 'linear-gradient(135deg,#f3f0e8,#7c7770)',
+    letter: 'S',
     query: 'gel manicure in Galway this Friday afternoon',
     reply: 'Three OpenBook nail studios in Galway have Friday afternoon slots:',
     results: [
-      { name: 'The Nail Studio', meta: 'Shop Street · 4.9 ★', color: '#ec4899', letter: 'N', slot: 'Fri 14:15', price: '€40' },
-      { name: 'Polished Galway', meta: 'Eyre Square · 4.7 ★', color: '#f59e0b', letter: 'P', slot: 'Fri 15:00', price: '€38' },
-      { name: 'Gloss Bar', meta: 'Salthill · 4.8 ★', color: '#10b981', letter: 'G', slot: 'Fri 16:30', price: '€45' },
+      { name: 'The Nail Studio', meta: 'Shop Street · 4.9 ★', color: '#D4AF37', letter: 'N', slot: 'Fri 14:15', price: '€40' },
+      { name: 'Polished Galway', meta: 'Eyre Square · 4.7 ★', color: '#b88a18', letter: 'P', slot: 'Fri 15:00', price: '€38' },
+      { name: 'Gloss Bar', meta: 'Salthill · 4.8 ★', color: '#e8c547', letter: 'G', slot: 'Fri 16:30', price: '€45' },
     ],
   },
 ];
@@ -113,7 +113,7 @@ export default function AIDistribution() {
             <p className="section-body" style={{ textAlign: 'center' }}>
               OpenBook businesses are discoverable via an MCP server at{' '}
               <code style={{ color: 'var(--gold)', fontFamily: 'var(--mono)', fontSize: '14px' }}>mcp.openbook.ie</code>{' '}
-              that ChatGPT, Claude and Gemini query directly. No other booking platform in Ireland does this.
+              that ChatGPT, Claude and Siri query directly. Your booking system can&apos;t do this. We sit on top of it and add the channel.
             </p>
           </Reveal>
         </div>

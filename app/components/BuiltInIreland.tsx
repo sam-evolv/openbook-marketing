@@ -9,12 +9,12 @@ export default function BuiltInIreland() {
           <div className="ireland-body">
             <p>OpenBook was not designed in a startup lab.</p>
             <p>
-              It was built because booking a session at a local gym or salon in 2026 should not require Instagram DMs, phone calls, or a marketplace taking a cut of every transaction.
+              It was built because in 2026 a local gym, salon or barber should be reachable on every channel a customer uses — a website, an app icon, WhatsApp, an AI assistant — not just on the booking system they happened to sign up to.
             </p>
             <p className="small">
               Every feature exists because a real Irish business asked for it.
             </p>
-            <a href="https://app.openbook.ie" className="ireland-link">See it running on openbook.ie →</a>
+            <a href="https://openbook.ie/evolv-performance" className="ireland-link">See it running on openbook.ie/evolv-performance →</a>
           </div>
         </Reveal>
       </div>

@@ -19,10 +19,11 @@ export default function Nav() {
           <span>OpenBook</span>
         </a>
         <div className="nav-links">
-          <a href="#features">Features</a>
-          <a href="#ai">AI Distribution</a>
-          <a href="#pricing">Pricing</a>
-          <a href="#faq">FAQ</a>
+          <a href="/#alongside">Works alongside</a>
+          <a href="/#ai">AI distribution</a>
+          <a href="/#features">Features</a>
+          <a href="/pricing">Pricing</a>
+          <a href="/#faq">FAQ</a>
         </div>
         <div className="nav-cta">
           <a href="https://app.openbook.ie/onboard" className="btn-text">Sign in</a>
