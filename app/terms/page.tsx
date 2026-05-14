@@ -58,7 +58,7 @@ export default function TermsPage() {
 
       <h2>6. Bookings, cancellations and refunds</h2>
 
-      <p><strong>Bookings made through an AI assistant.</strong> If you ask an AI assistant (ChatGPT, Claude, Gemini, or another) to book a service for you, the assistant acts as your agent — we treat the booking as your booking, made with your consent. You are responsible for confirming the details the assistant proposes before payment. If an assistant books on your behalf without your consent, contact us and the business immediately and we will work with you to resolve it. We log assistant-mediated bookings with a source identifier so we can trace anomalies if needed.</p>
+      <p><strong>Bookings made through an AI assistant.</strong> If you ask an AI assistant (ChatGPT, Claude, Siri, or another) to book a service for you, the assistant acts as your agent — we treat the booking as your booking, made with your consent. You are responsible for confirming the details the assistant proposes before payment. If an assistant books on your behalf without your consent, contact us and the business immediately and we will work with you to resolve it. We log assistant-mediated bookings with a source identifier so we can trace anomalies if needed.</p>
 
       <p><strong>Consumers.</strong> When you book a service, you&apos;re entering a contract with the business — not with OpenBook. The business is responsible for delivering the service. We&apos;re responsible for processing the booking and the payment.</p>
 
@@ -87,10 +87,12 @@ export default function TermsPage() {
       <p>OpenBook is offered on three tiers:</p>
 
       <ul>
-        <li><strong>Free</strong> — €0/month, includes a booking page and up to 2 services.</li>
-        <li><strong>Growth</strong> — €0/month, plus 2% on card payments processed through Stripe.</li>
-        <li><strong>Pro</strong> — €39/month flat, no transaction fees from us, includes WhatsApp bookings, AI insights, flash sales, and AI distribution.</li>
+        <li><strong>Free</strong> — €0/month, includes a booking page and up to 2 services. Manual booking management, no card payments.</li>
+        <li><strong>Pro</strong> — €39/month flat, no transaction fees from us, includes Stripe card payments, automated reminders, AI dashboard insights, and AI distribution via MCP.</li>
+        <li><strong>Complete</strong> — €79/month flat (first month free), everything in Pro plus your own website (custom domain supported), an iOS PWA app icon on customer home screens, white-label WhatsApp bookings registered under your business name, and flash sales + waitlist tools.</li>
       </ul>
+
+      <p>OpenBook never takes a percentage of your bookings. There is no marketplace commission and no booking fee — ever. Card payments use Stripe&apos;s standard fee, paid directly to Stripe.</p>
 
       <p>Tier prices and features can change with 30 days&apos; notice. We&apos;ll always honour the price you signed up at for the duration of any free trial.</p>
 
@@ -112,9 +114,9 @@ export default function TermsPage() {
 
       <h2>10. AI distribution</h2>
 
-      <p>Pro businesses are surfaced through OpenBook&apos;s MCP server (<a href="http://mcp.openbook.ie">mcp.openbook.ie</a>), which makes their services queryable by AI assistants like ChatGPT, Claude, and Gemini. By choosing the Pro tier, you authorise us to share your business name, services, prices, location and live availability with these third-party AI services for the purpose of helping consumers discover and book your services.</p>
+      <p>Businesses on the Pro and Complete tiers are surfaced through OpenBook&apos;s MCP server (<a href="http://mcp.openbook.ie">mcp.openbook.ie</a>), which makes their services queryable by AI assistants like ChatGPT, Claude, and Siri. By choosing Pro or Complete, you authorise us to share your business name, services, prices, location and live availability with these third-party AI services for the purpose of helping consumers discover and book your services.</p>
 
-      <p>If you don&apos;t want this, downgrade to Growth or Free, where AI distribution is not included.</p>
+      <p>If you don&apos;t want this, downgrade to Free, where AI distribution is not included.</p>
 
       <p>Detailed field-level disclosure of what data flows through the MCP server is in our Privacy Policy, Section 6.</p>
 
@@ -143,7 +145,7 @@ export default function TermsPage() {
 
       <p>We aim for 99.9% uptime but don&apos;t guarantee it. Like every internet service, OpenBook will sometimes be down for maintenance, third-party outages (Vercel, Supabase, Stripe), or unforeseen issues. We&apos;ll communicate about anything significant via the dashboard and email.</p>
 
-      <p>We don&apos;t provide a Service Level Agreement (SLA) at the Free or Growth tier. Pro tier customers get priority support — meaning we respond faster, not that we guarantee a response time.</p>
+      <p>We don&apos;t provide a Service Level Agreement (SLA) at the Free tier. Pro and Complete customers get priority support — meaning we respond faster, not that we guarantee a response time.</p>
 
       <h2>14. Limitation of liability</h2>
 

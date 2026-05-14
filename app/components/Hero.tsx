@@ -140,25 +140,28 @@ export default function Hero() {
       <div className="container hero-inner">
         <div className="hero-copy">
           <div className="eyebrow fade-up" style={{ animationDelay: '0.1s' }}>
-            <span className="eyebrow-dot" /> Now live · Ireland
+            <span className="eyebrow-dot" /> A distribution layer · Built in Ireland
           </div>
           <h1>
-            <span className="reveal-word"><span style={{ animationDelay: '0ms' }}>Bookings</span></span>{' '}
-            <span className="reveal-word"><span style={{ animationDelay: '80ms' }}>that</span></span>{' '}
-            <span className="reveal-word"><span style={{ animationDelay: '160ms' }}>close</span></span>{' '}
-            <span className="reveal-word"><span className="gold" style={{ animationDelay: '240ms' }}>themselves.</span></span>
+            <span className="reveal-word"><span style={{ animationDelay: '0ms' }}>Your</span></span>{' '}
+            <span className="reveal-word"><span style={{ animationDelay: '70ms' }}>business,</span></span>{' '}
+            <span className="reveal-word"><span style={{ animationDelay: '140ms' }}>on</span></span>{' '}
+            <span className="reveal-word"><span className="gold" style={{ animationDelay: '210ms' }}>every</span></span>{' '}
+            <span className="reveal-word"><span style={{ animationDelay: '280ms' }}>channel</span></span>{' '}
+            <span className="reveal-word"><span style={{ animationDelay: '350ms' }}>customers</span></span>{' '}
+            <span className="reveal-word"><span style={{ animationDelay: '420ms' }}>use.</span></span>
           </h1>
-          <p className="hero-sub fade-up" style={{ animationDelay: '0.8s' }}>
-            Your booking page, live in 15 minutes. Customers tap, pick a slot, pay. You show up. Zero commission, zero chasing.
+          <p className="hero-sub fade-up" style={{ animationDelay: '0.95s' }}>
+            A beautiful website, an app icon on your customers&apos; phones, white-label WhatsApp bookings, and your services discoverable through ChatGPT, Claude, and Siri. <b className="hero-sub-strong">€79/month. No commission. Ever.</b>
           </p>
-          <div className="hero-ctas fade-up" style={{ animationDelay: '0.95s' }}>
-            <a href="https://app.openbook.ie/onboard" className="btn btn-primary">Get your page live <span>→</span></a>
-            <a href="#consumer" className="btn btn-ghost">See the consumer app</a>
+          <div className="hero-ctas fade-up" style={{ animationDelay: '1.1s' }}>
+            <a href="https://app.openbook.ie/onboard" className="btn btn-primary">Get started — first month free <span>→</span></a>
+            <a href="https://openbook.ie/evolv-performance" className="btn btn-ghost">See it live</a>
           </div>
-          <div className="hero-meta fade-up" style={{ animationDelay: '1.1s' }}>
-            <span>Free to start</span>
-            <span>No credit card</span>
-            <span>15 min setup</span>
+          <div className="hero-meta fade-up" style={{ animationDelay: '1.25s' }}>
+            <span>No commission, ever</span>
+            <span>Works with your booking system</span>
+            <span>Cancel anytime</span>
           </div>
         </div>
 

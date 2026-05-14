@@ -8,14 +8,15 @@ export default function Footer() {
               <span className="logo-mark">O</span>
               <span>OpenBook</span>
             </a>
-            <p className="tag">The booking platform built for the AI era.</p>
+            <p className="tag">Your business, on every channel customers use.</p>
           </div>
           <div className="footer-col">
             <h5>Product</h5>
-            <a href="#features">Features</a>
-            <a href="#ai">AI distribution</a>
-            <a href="#pricing">Pricing</a>
-            <a href="#consumer">Consumer app</a>
+            <a href="/#alongside">Works alongside</a>
+            <a href="/#features">Features</a>
+            <a href="/#ai">AI distribution</a>
+            <a href="/pricing">Pricing</a>
+            <a href="/#consumer">Consumer app</a>
           </div>
           <div className="footer-col">
             <h5>Company</h5>

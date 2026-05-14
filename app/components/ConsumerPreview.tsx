@@ -24,9 +24,9 @@ export default function ConsumerPreview() {
           <Reveal>
             <div>
               <div className="section-eyebrow">The consumer side</div>
-              <h2 className="section-title">It lives on <span className="gold">their phone.</span></h2>
+              <h2 className="section-title">An app icon, <span className="gold">your brand.</span></h2>
               <p className="section-body" style={{ marginBottom: 24 }}>
-                Customers save your business to their home screen as a glass icon in your brand colour. Two taps to rebook. No app store, no download, no friction.
+                On Complete, customers save your business to their home screen as a glass icon in your brand colour. Two taps to rebook. No app store, no download, no friction. Your booking system doesn&apos;t give you this — we do.
               </p>
               <p className="section-body" style={{ fontSize: 15, color: 'var(--text-3)' }}>
                 Rendered with iOS-native materials. Works on iOS 17+ and Android.
