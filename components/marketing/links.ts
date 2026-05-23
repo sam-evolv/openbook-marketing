@@ -4,9 +4,9 @@
 // app route differs.
 export const ONBOARD_URL = "https://app.openbook.ie/onboarding";
 export const SIGNIN_URL = "https://app.openbook.ie";
-// "See a live booking page" — brief suggests /demo (not yet built), so this
-// points at the live consumer app. Swap for a real demo slug when available.
-export const DEMO_URL = "https://app.openbook.ie/home";
+// "See a live booking page" — points to the real, live booking page for
+// Evolv Performance (the flagship pilot business), matching the CTA promise.
+export const DEMO_URL = "https://app.openbook.ie/evolv-performance";
 export const CONSUMER_APP_URL = "https://app.openbook.ie/home";
 export const CONTACT_EMAIL = "sam@openhouseai.ie";
 export const CONTACT_MAILTO = "mailto:sam@openhouseai.ie";
