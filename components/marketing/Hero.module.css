@@ -1,0 +1,263 @@
+.hero {
+  position: relative;
+  overflow: hidden;
+  background: var(--bg-base);
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 92px 0 72px;
+}
+
+@media (min-width: 768px) {
+  .hero {
+    padding: 116px 0 96px;
+  }
+}
+
+/* ---- background: grid + orbs (pure CSS, zero JS) ---- */
+.grid {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.025) 1px,
+      transparent 1px
+    ),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+  background-size: 56px 56px;
+  -webkit-mask-image: radial-gradient(
+    ellipse at center top,
+    #000 0%,
+    transparent 70%
+  );
+  mask-image: radial-gradient(ellipse at center top, #000 0%, transparent 70%);
+}
+
+.orbTR {
+  position: absolute;
+  top: -200px;
+  right: -100px;
+  width: 480px;
+  height: 480px;
+  pointer-events: none;
+  background: radial-gradient(
+    circle,
+    rgba(212, 175, 55, 0.1) 0%,
+    transparent 70%
+  );
+}
+
+.orbBL {
+  position: absolute;
+  bottom: -60px;
+  left: -100px;
+  width: 380px;
+  height: 380px;
+  pointer-events: none;
+  background: radial-gradient(
+    circle,
+    rgba(212, 175, 55, 0.06) 0%,
+    transparent 70%
+  );
+}
+
+.fold {
+  position: relative;
+  z-index: 2;
+}
+
+/* ---- eyebrow ---- */
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 32px;
+  padding: 0 14px;
+  border-radius: 999px;
+  background: var(--glass-surface);
+  border: 1px solid var(--glass-border);
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: 0.02em;
+  color: var(--text-primary);
+  animation: obFadeIn 240ms var(--ease-out) 0ms both;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--gold);
+  box-shadow: 0 0 8px rgba(212, 175, 55, 0.7);
+}
+
+/* ---- headline ---- */
+.headline {
+  margin: 16px 0 0;
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-optical-sizing: auto;
+  font-variation-settings: "opsz" 144;
+  font-size: clamp(40px, 11vw, 56px);
+  line-height: 1.02;
+  letter-spacing: -0.035em;
+  color: var(--text-primary);
+}
+
+@media (min-width: 768px) {
+  .headline {
+    font-size: clamp(56px, 6.2vw, 84px);
+  }
+}
+
+.line1,
+.line2,
+.line3 {
+  display: block;
+}
+
+.line1 {
+  animation: obFadeRise 320ms var(--ease-out) 120ms both;
+}
+.line2 {
+  animation: obFadeRise 320ms var(--ease-out) 280ms both;
+}
+.line3 {
+  animation: obFadeRise 320ms var(--ease-out) 440ms both;
+}
+
+.gold {
+  position: relative;
+  display: inline-block;
+  color: var(--gold);
+}
+
+.gold::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0.04em;
+  bottom: 0.02em;
+  height: 1px;
+  background: var(--gold);
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: obUnderline 400ms var(--ease-out) 600ms both;
+}
+
+/* ---- price statement ---- */
+.price {
+  margin: 24px 0 0;
+  max-width: 38ch;
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.45;
+  color: var(--text-primary);
+  animation: obFadeIn 240ms var(--ease-out) 800ms both;
+}
+
+@media (min-width: 768px) {
+  .price {
+    font-size: 22px;
+  }
+}
+
+.priceNum {
+  font-family: var(--font-mono);
+  font-weight: 500;
+}
+
+/* ---- CTAs ---- */
+.ctas {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 32px 0 0;
+  animation: obFadeRiseSm 240ms var(--ease-out) 960ms both;
+}
+
+@media (min-width: 600px) {
+  .ctas {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+/* ---- risk reversal ---- */
+.risk {
+  margin: 16px 0 0;
+  max-width: 40ch;
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--text-secondary);
+  animation: obFadeIn 200ms var(--ease-out) 1200ms both;
+}
+
+/* ---- trust statement ---- */
+.trust {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 28px 0 0;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  line-height: 1.5;
+  color: var(--text-tertiary);
+  animation: obFadeIn 200ms var(--ease-out) 1340ms both;
+}
+
+.trustDot {
+  flex-shrink: 0;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--gold);
+}
+
+@keyframes obFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes obFadeRise {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes obFadeRiseSm {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes obUnderline {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}

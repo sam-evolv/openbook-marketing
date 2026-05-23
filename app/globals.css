@@ -1,5 +1,6 @@
 /* OpenBook Marketing Site — tokens + primitives */
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500;1,9..144,600;1,9..144,700&family=Inter+Tight:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+/* Fonts are self-hosted via next/font (see app/layout.tsx), exposed as
+   --font-fraunces / --font-inter / --font-geist-mono on <html>. */
 
 :root{
   --gold:#D4AF37;
@@ -15,9 +16,9 @@
   --text-1:#f3f0e8;
   --text-2:#b7b3a8;
   --text-3:#6f6c63;
-  --serif:'Fraunces',Georgia,serif;
-  --sans:'Inter Tight','Inter',system-ui,sans-serif;
-  --mono:'JetBrains Mono',monospace;
+  --serif:var(--font-fraunces),Georgia,serif;
+  --sans:var(--font-inter),'Inter',system-ui,sans-serif;
+  --mono:var(--font-geist-mono),ui-monospace,monospace;
   --ease:cubic-bezier(0.16,1,0.3,1);
 }
 

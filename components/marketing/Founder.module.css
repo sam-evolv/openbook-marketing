@@ -1,0 +1,92 @@
+.section {
+  background: var(--bg-elevated);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+@media (min-width: 900px) {
+  .grid {
+    grid-template-columns: 5fr 7fr;
+    gap: 64px;
+  }
+}
+
+.portraitCol {
+  max-width: 360px;
+}
+
+.portrait {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  border-radius: 12px;
+  border: 1px solid var(--gold);
+  background: linear-gradient(
+    160deg,
+    rgba(212, 175, 55, 0.1),
+    rgba(8, 8, 8, 0.6)
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.monogram {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-optical-sizing: auto;
+  font-variation-settings: "opsz" 144;
+  font-size: 96px;
+  letter-spacing: -0.02em;
+  color: var(--gold);
+}
+
+.title {
+  max-width: 16ch;
+  font-size: 26px;
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: 36px;
+  }
+}
+
+.body {
+  margin-top: 24px;
+  max-width: 52ch;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.body p {
+  margin: 0;
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--text-75);
+}
+
+.signature {
+  margin: 28px 0 0;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 18px;
+  color: var(--gold);
+}
+
+.role {
+  margin: 6px 0 0;
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 13px;
+  color: var(--text-tertiary);
+}

@@ -1,41 +1,41 @@
-import Nav from './components/Nav';
-import Hero from './components/Hero';
-import WorksAlongside from './components/WorksAlongside';
-import Marquee from './components/Marquee';
-import Problem from './components/Problem';
-import AIDistribution from './components/AIDistribution';
-import ThreeSteps from './components/ThreeSteps';
-import Features from './components/Features';
-import DashboardPreview from './components/DashboardPreview';
-import ConsumerPreview from './components/ConsumerPreview';
-import CommissionCompare from './components/CommissionCompare';
-import BuiltInIreland from './components/BuiltInIreland';
-import Pricing from './components/Pricing';
-import FAQ from './components/FAQ';
-import FinalCTA from './components/FinalCTA';
-import Footer from './components/Footer';
+import Nav from "@/components/marketing/Nav";
+import Hero from "@/components/marketing/Hero";
+import ProofOfCraft from "@/components/marketing/ProofOfCraft";
+import LossFrame from "@/components/marketing/LossFrame";
+import MidCta from "@/components/marketing/MidCta";
+import HowItWorks from "@/components/marketing/HowItWorks";
+import AiDistribution from "@/components/marketing/AiDistribution";
+import Comparison from "@/components/marketing/Comparison";
+import Pricing from "@/components/marketing/Pricing";
+import Founder from "@/components/marketing/Founder";
+import Faq from "@/components/marketing/Faq";
+import FinalCta from "@/components/marketing/FinalCta";
+import Footer from "@/components/marketing/Footer";
+import ui from "@/components/marketing/ui.module.css";
+
+export const dynamic = "force-static";
 
 export default function Page() {
   return (
-    <>
+    <div className="obRoot">
+      <a href="#main" className={ui.skipLink}>
+        Skip to content
+      </a>
       <Nav />
-      <main>
+      <main id="main">
         <Hero />
-        <WorksAlongside />
-        <Marquee />
-        <Problem />
-        <AIDistribution />
-        <ThreeSteps />
-        <Features />
-        <DashboardPreview />
-        <ConsumerPreview />
-        <CommissionCompare />
-        <BuiltInIreland />
+        <ProofOfCraft />
+        <LossFrame />
+        <MidCta />
+        <HowItWorks />
+        <AiDistribution />
+        <Comparison />
         <Pricing />
-        <FAQ />
-        <FinalCTA />
+        <Founder />
+        <Faq />
+        <FinalCta />
       </main>
       <Footer />
-    </>
+    </div>
   );
 }
