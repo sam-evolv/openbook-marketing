@@ -28,7 +28,7 @@ export default function Footer() {
           <div className="footer-col">
             <h5>Resources</h5>
             <span>Docs</span>
-            <span>MCP server</span>
+            <a href="/docs/mcp">MCP server</a>
             <span>Status</span>
             <span>Support</span>
           </div>
