@@ -2,9 +2,11 @@
 
 import { useEffect, useState } from 'react';
 import Reveal from './Reveal';
-import { shade } from './shade';
+import { darken } from './shade';
 
-type AITab = {
+// ChatGPT + Claude only — no Gemini (intentionally removed).
+type AiResult = { name: string; meta: string; color: string; letter: string; slot: string; price: string };
+type AiTab = {
   id: string;
   name: string;
   color: string;
@@ -12,10 +14,10 @@ type AITab = {
   letter: string;
   query: string;
   reply: string;
-  results: { name: string; meta: string; color: string; letter: string; slot: string; price: string }[];
+  results: AiResult[];
 };
 
-const AI_TABS: AITab[] = [
+const AI_TABS: AiTab[] = [
   {
     id: 'chatgpt',
     name: 'ChatGPT',
@@ -23,11 +25,11 @@ const AI_TABS: AITab[] = [
     bg: 'linear-gradient(135deg,#10a37f,#0d8866)',
     letter: 'G',
     query: 'book me a personal trainer in Dublin tomorrow morning',
-    reply: 'Three OpenBook trainers in Dublin have availability tomorrow between 6am and 10am:',
+    reply: 'Three OpenBook trainers in Dublin have availability tomorrow morning. Want me to book the first?',
     results: [
-      { name: 'Evolv Performance', meta: 'Ballsbridge · 4.9 ★', color: '#D4AF37', letter: 'E', slot: 'Tue 07:00', price: '€55' },
-      { name: 'Strength Lab', meta: 'Dublin 2 · 4.8 ★', color: '#ef4444', letter: 'S', slot: 'Tue 08:30', price: '€60' },
-      { name: 'Kinetic Coach', meta: 'Rathmines · 4.9 ★', color: '#8b5cf6', letter: 'K', slot: 'Tue 09:15', price: '€50' },
+      { name: 'A Ballsbridge PT studio', meta: '4.9 ★ · 1.2 km', color: '#E89A17', letter: 'A', slot: 'Tue 07:00', price: '€55' },
+      { name: 'Strength Lab Dublin', meta: '4.8 ★ · 2.4 km', color: '#ef4444', letter: 'S', slot: 'Tue 08:30', price: '€60' },
+      { name: 'Kinetic Coach', meta: '4.9 ★ · 3.1 km', color: '#8b5cf6', letter: 'K', slot: 'Tue 09:15', price: '€50' },
     ],
   },
   {
@@ -39,22 +41,8 @@ const AI_TABS: AITab[] = [
     query: 'find me a sauna in Cork with a Saturday evening slot',
     reply: 'Two OpenBook saunas in Cork have Saturday evening availability:',
     results: [
-      { name: 'Saltwater Sauna Cork', meta: 'Blackrock · 4.9 ★', color: '#0ea5e9', letter: 'S', slot: 'Sat 19:00', price: '€22' },
-      { name: 'Wellspring Spa', meta: 'Douglas · 4.8 ★', color: '#8b5cf6', letter: 'W', slot: 'Sat 20:30', price: '€30' },
-    ],
-  },
-  {
-    id: 'siri',
-    name: 'Siri',
-    color: '#c9c4b8',
-    bg: 'linear-gradient(135deg,#f3f0e8,#7c7770)',
-    letter: 'S',
-    query: 'gel manicure in Galway this Friday afternoon',
-    reply: 'Three OpenBook nail studios in Galway have Friday afternoon slots:',
-    results: [
-      { name: 'The Nail Studio', meta: 'Shop Street · 4.9 ★', color: '#D4AF37', letter: 'N', slot: 'Fri 14:15', price: '€40' },
-      { name: 'Polished Galway', meta: 'Eyre Square · 4.7 ★', color: '#b88a18', letter: 'P', slot: 'Fri 15:00', price: '€38' },
-      { name: 'Gloss Bar', meta: 'Salthill · 4.8 ★', color: '#e8c547', letter: 'G', slot: 'Fri 16:30', price: '€45' },
+      { name: 'A Blackrock sauna', meta: '4.9 ★ · 6 km', color: '#0ea5e9', letter: 'S', slot: 'Sat 19:00', price: '€22' },
+      { name: 'A Douglas wellness spa', meta: '4.8 ★ · 4 km', color: '#8b5cf6', letter: 'W', slot: 'Sat 20:30', price: '€30' },
     ],
   },
 ];
@@ -87,9 +75,7 @@ export default function AIDistribution() {
       }
     }, 38);
 
-    const cycle = setTimeout(() => {
-      setTab((t) => (t + 1) % AI_TABS.length);
-    }, 7200);
+    const cycle = setTimeout(() => setTab((t) => (t + 1) % AI_TABS.length), 7400);
 
     return () => {
       clearInterval(typeInterval);
@@ -104,26 +90,24 @@ export default function AIDistribution() {
   return (
     <section id="ai" className="section ai-section">
       <div className="container">
-        <div className="section-head center" style={{ maxWidth: 820, marginLeft: 'auto', marginRight: 'auto' }}>
+        <div className="section-head center">
           <Reveal>
-            <div className="section-eyebrow">The OpenBook advantage</div>
+            <div className="section-eyebrow">The OpenBook wedge</div>
             <h2 className="section-title">
-              When someone asks AI to book a service near them, <span className="gold">is your business the answer?</span>
+              When someone asks AI to book near them, <span className="gold">is your business the answer?</span>
             </h2>
             <p className="section-body" style={{ textAlign: 'center' }}>
               OpenBook businesses are discoverable via an MCP server at{' '}
-              <code style={{ color: 'var(--gold)', fontFamily: 'var(--mono)', fontSize: '14px' }}>mcp.openbook.ie</code>{' '}
-              that ChatGPT, Claude and Siri query directly. Your booking system can&apos;t do this. We sit on top of it and add the channel.
+              <code style={{ color: 'var(--gold-light)', fontFamily: 'var(--mono)', fontSize: '14px' }}>
+                mcp.openbook.ie
+              </code>{' '}
+              that ChatGPT and Claude query directly. No other Irish booking platform does this.
             </p>
           </Reveal>
         </div>
 
         <Reveal>
-          <div
-            className="ai-chat"
-            onMouseEnter={() => setPaused(true)}
-            onMouseLeave={() => setPaused(false)}
-          >
+          <div className="ai-chat" onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(false)}>
             <div className="ai-tabs">
               {AI_TABS.map((t, i) => (
                 <button
@@ -135,20 +119,13 @@ export default function AIDistribution() {
                   {t.name}
                 </button>
               ))}
-              <div style={{ flex: 1 }} />
-              <div
-                className="ai-tab"
-                style={{ color: 'var(--text-3)', fontFamily: 'var(--mono)', fontSize: 10, letterSpacing: '0.1em' }}
-              >
-                mcp.openbook.ie
-              </div>
+              <div className="ai-mcp">mcp.openbook.ie</div>
             </div>
             <div className="ai-body">
               <div className="ai-query">
                 <div className="ai-avatar">You</div>
                 <div className={`content ${!showReply ? 'caret' : ''}`}>{typed}</div>
               </div>
-
               {showReply && (
                 <div className="ai-reply">
                   <div className="ai-reply-avatar" style={{ background: current.bg }}>
@@ -161,7 +138,7 @@ export default function AIDistribution() {
                         <div key={i} className="ai-biz-card" style={{ animationDelay: `${i * 80}ms` }}>
                           <div
                             className="ai-biz-icon"
-                            style={{ background: `linear-gradient(135deg, ${r.color}, ${shade(r.color, -30)})` }}
+                            style={{ background: `linear-gradient(135deg, ${r.color}, ${darken(r.color, 30)})` }}
                           >
                             {r.letter}
                           </div>
@@ -184,22 +161,34 @@ export default function AIDistribution() {
         </Reveal>
 
         <div className="ai-supports">
-          <Reveal delay={100}>
+          <Reveal delay={80}>
             <div className="ai-support">
               <div className="n">01</div>
-              <div className="t">One integration,<br />three assistants.</div>
+              <div className="t">
+                One MCP server,
+                <br />
+                both assistants.
+              </div>
             </div>
           </Reveal>
-          <Reveal delay={200}>
+          <Reveal delay={160}>
             <div className="ai-support">
               <div className="n">02</div>
-              <div className="t">No extra work<br />for the business.</div>
+              <div className="t">
+                No extra work
+                <br />
+                for the business.
+              </div>
             </div>
           </Reveal>
-          <Reveal delay={300}>
+          <Reveal delay={240}>
             <div className="ai-support">
               <div className="n">03</div>
-              <div className="t">Updated in real time<br />from your calendar.</div>
+              <div className="t">
+                Updated in real time
+                <br />
+                from your calendar.
+              </div>
             </div>
           </Reveal>
         </div>

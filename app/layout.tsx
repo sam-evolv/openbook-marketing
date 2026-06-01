@@ -1,14 +1,33 @@
 import './globals.css';
-import type { Metadata } from 'next';
-import { GeistSans } from 'geist/font/sans';
-import { Fraunces } from 'next/font/google';
+import type { Metadata, Viewport } from 'next';
+import { Fraunces, Inter, JetBrains_Mono } from 'next/font/google';
 
-const fraunces = Fraunces({ subsets: ['latin'], variable: '--font-fraunces', display: 'swap' });
+// Headlines, numbers, prices. Variable font — opsz 9–144, normal + italic.
+const fraunces = Fraunces({
+  subsets: ['latin'],
+  style: ['normal', 'italic'],
+  variable: '--font-fraunces',
+  display: 'swap',
+});
+
+// Body + UI. Variable font covers the 300–800 range used in the design.
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
+  display: 'swap',
+});
+
+// Eyebrows, labels, tags (uppercase, letter-spaced).
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ['latin'],
+  variable: '--font-jetbrains-mono',
+  display: 'swap',
+});
 
 export const metadata: Metadata = {
-  title: 'OpenBook — Your business, on every channel customers use.',
+  title: 'OpenBook — An app, a website, AI bookings. €79/month.',
   description:
-    'A distribution layer + website builder that works alongside your booking system. A beautiful website, an app icon, white-label WhatsApp bookings, and AI distribution through ChatGPT, Claude and Siri. €79/month. No commission, ever.',
+    'OpenBook gives small Irish businesses a booking page, a customer app icon, and discoverability on ChatGPT and Claude. €79/month, all-in. Live in 15 minutes.',
   icons: {
     icon: [
       { url: '/icons/favicon-16.png', sizes: '16x16', type: 'image/png' },
@@ -31,15 +50,25 @@ export const metadata: Metadata = {
     shortcut: '/favicon.ico',
   },
   openGraph: {
-    title: 'OpenBook — Your business, on every channel customers use.',
+    title: 'OpenBook — An app, a website, AI bookings. €79/month.',
     description:
-      'Website, app icon, WhatsApp bookings and AI distribution for Irish service businesses. Works alongside whatever booking system you already use. €79/month, no commission.',
+      'OpenBook gives small Irish businesses a booking page, a customer app icon, and discoverability on ChatGPT and Claude. €79/month, all-in. Live in 15 minutes.',
   },
+};
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  viewportFit: 'cover',
+  themeColor: '#080808',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${GeistSans.variable} ${fraunces.variable}`}>
+    <html
+      lang="en"
+      className={`${fraunces.variable} ${inter.variable} ${jetbrainsMono.variable}`}
+    >
       <body>{children}</body>
     </html>
   );
