@@ -11,6 +11,7 @@ import ThreeSteps from './components/ThreeSteps';
 import Features from './components/Features';
 import DashboardPreview from './components/DashboardPreview';
 import ConsumerPreview from './components/ConsumerPreview';
+import WebsiteShowcase from './components/WebsiteShowcase';
 import StackReplace from './components/StackReplace';
 import Pricing from './components/Pricing';
 import FAQ from './components/FAQ';
@@ -42,6 +43,7 @@ export default function Page() {
         <Features />
         <DashboardPreview />
         <ConsumerPreview />
+        <WebsiteShowcase />
         <StackReplace />
         <Pricing price={PRICE} remaining={REMAINING} />
         <FAQ />

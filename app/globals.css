@@ -3060,3 +3060,151 @@ section { position: relative; }
 }
 .cg-booked-footer .brand { color: var(--gold-light); font-weight: 500; }
 
+/* ============================================================
+   WEBSITE SHOWCASE — a real customer site (the bespoke website
+   that comes with the subscription)
+   ============================================================ */
+.showcase-section {
+  padding: 96px 0;
+  position: relative;
+  background: radial-gradient(ellipse 60% 80% at 50% 38%, rgba(232,154,23,0.05), transparent 70%);
+  overflow: hidden;
+}
+@media (min-width: 768px) { .showcase-section { padding: 130px 0; } }
+
+.showcase-wrap {
+  max-width: 1080px;
+  margin: 56px auto 0;
+  perspective: 2000px;
+  position: relative;
+}
+.showcase-wrap::before {
+  content: '';
+  position: absolute;
+  left: 50%; bottom: -8%;
+  transform: translateX(-50%);
+  width: 82%; height: 62%;
+  background: radial-gradient(ellipse, rgba(232,154,23,0.20), transparent 70%);
+  filter: blur(46px);
+  pointer-events: none;
+  z-index: 0;
+}
+.showcase-browser {
+  position: relative;
+  z-index: 1;
+  display: block;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--line-strong);
+  background: var(--ink-2);
+  box-shadow:
+    0 40px 100px rgba(0,0,0,0.55),
+    0 0 80px rgba(232,154,23,0.08),
+    inset 0 0 0 1px rgba(255,255,255,0.04);
+  transition: transform var(--dur-slow) var(--ease), box-shadow var(--dur-slow) var(--ease);
+}
+@media (min-width: 768px) { .showcase-browser { transform: rotateX(5deg); } }
+.showcase-browser:hover {
+  transform: none;
+  box-shadow: 0 50px 120px rgba(0,0,0,0.6), 0 0 110px rgba(232,154,23,0.16);
+}
+.showcase-chrome {
+  display: flex; align-items: center; gap: 8px;
+  padding: 12px 16px;
+  background: rgba(0,0,0,0.35);
+  border-bottom: 1px solid var(--line);
+}
+.showcase-dot { width: 11px; height: 11px; border-radius: 50%; background: #2a2a2e; flex-shrink: 0; }
+.showcase-dot:nth-child(1) { background: #ff605c; }
+.showcase-dot:nth-child(2) { background: #ffbd44; }
+.showcase-dot:nth-child(3) { background: #00ca4e; }
+.showcase-url {
+  flex: 1;
+  margin: 0 10px;
+  display: flex; align-items: center; justify-content: center; gap: 7px;
+  padding: 6px 14px;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--line);
+  font-family: var(--mono);
+  font-size: 11.5px;
+  color: var(--text-2);
+  letter-spacing: 0.02em;
+  min-width: 0;
+}
+.showcase-url svg { width: 11px; height: 11px; color: var(--gold-light); flex-shrink: 0; }
+.showcase-live {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.showcase-live-dot {
+  width: 7px; height: 7px; border-radius: 50%;
+  background: #10b981; box-shadow: 0 0 9px #10b981;
+  animation: pulse 2s ease-in-out infinite;
+}
+@media (max-width: 560px) { .showcase-live { display: none; } }
+.showcase-shot {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 600px;
+  object-fit: cover;
+  object-position: top center;
+  background: #0c0c0e;
+}
+.showcase-cap {
+  display: flex; align-items: center; justify-content: center;
+  gap: 16px; flex-wrap: wrap;
+  margin-top: 30px;
+}
+.showcase-cap .name { font-family: var(--serif); font-style: italic; font-size: 19px; color: var(--text-1); letter-spacing: -0.01em; }
+.showcase-cap .sep { width: 4px; height: 4px; border-radius: 50%; background: var(--gold); }
+.showcase-points {
+  display: flex; justify-content: center; flex-wrap: wrap;
+  gap: 14px 30px;
+  margin-top: 28px;
+}
+.showcase-point {
+  display: flex; align-items: center; gap: 8px;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-3);
+}
+.showcase-point::before { content: ''; width: 5px; height: 5px; border-radius: 50%; background: var(--gold); box-shadow: 0 0 8px var(--gold); }
+
+/* Mobile-view phone overlapping the browser frame (responsive proof) */
+.showcase-phone {
+  position: absolute;
+  z-index: 3;
+  left: -2%; bottom: 7%;
+  width: 168px;
+  border-radius: 30px;
+  background: #050507;
+  border: 6px solid #050507;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.6), 0 0 44px rgba(232,154,23,0.14);
+  transform: rotate(-5deg);
+  overflow: hidden;
+}
+.showcase-phone::before {
+  content: '';
+  position: absolute; top: 9px; left: 50%; transform: translateX(-50%);
+  width: 46px; height: 5px; border-radius: 3px; background: #000; z-index: 2;
+}
+.showcase-phone img {
+  display: block; width: 100%; height: auto;
+  border-radius: 24px;
+  max-height: 380px;
+  object-fit: cover; object-position: top center;
+  background: #0c0c0e;
+}
+@media (max-width: 900px) { .showcase-phone { width: 134px; left: 0; bottom: 5%; } }
+@media (max-width: 600px) { .showcase-phone { display: none; } }
+

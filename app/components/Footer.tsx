@@ -14,6 +14,7 @@ export default function Footer() {
             <h5>Product</h5>
             <a href="#features">Features</a>
             <a href="#ai">AI distribution</a>
+            <a href="#website">Example site</a>
             <a href="#pricing">Pricing</a>
             <a href="#consumer">Consumer app</a>
           </div>
