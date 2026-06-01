@@ -66,7 +66,7 @@ export default function WhatYouGet() {
               <div className={'assemble-block' + (step >= 1 ? ' in' : '')}>
                 <div className="num">01</div>
                 <div className="visual app">
-                  <img src="/openbook-mark-transparent.png" alt="" />
+                  <img src="/brand/openbook-mark-transparent.png" alt="" />
                 </div>
                 <div className="label">
                   <div className="title">Your app icon</div>

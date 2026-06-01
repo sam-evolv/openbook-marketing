@@ -175,7 +175,7 @@ export default function DashboardPreview() {
                 </div>
 
                 <div className="dash-intel">
-                  <img className="dash-intel-icon" src="/openbook-mark.png" alt="" />
+                  <img className="dash-intel-icon" src="/brand/openbook-mark.png" alt="" />
                   <div className="dash-intel-copy">
                     <div className="dash-intel-title">3 quiet slots Friday after 5pm.</div>
                     <div className="dash-intel-sub">

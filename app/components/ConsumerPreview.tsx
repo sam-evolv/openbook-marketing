@@ -97,7 +97,7 @@ export default function ConsumerPreview() {
                           </svg>
                         )}
                         {t.icon === 'ob' && (
-                          <img src="/openbook-mark-transparent.png" alt="" style={{ width: '64%', height: '64%', objectFit: 'contain' }} />
+                          <img src="/brand/openbook-mark-transparent.png" alt="" style={{ width: '64%', height: '64%', objectFit: 'contain' }} />
                         )}
                       </div>
                       <div className="phone-app-label">{t.name}</div>
@@ -134,7 +134,7 @@ export default function ConsumerPreview() {
                     <span>Explore</span>
                   </div>
                   <div className="phone-tab">
-                    <img src="/openbook-mark-transparent.png" alt="" />
+                    <img src="/brand/openbook-mark-transparent.png" alt="" />
                     <span>AI</span>
                   </div>
                   <div className="phone-tab">

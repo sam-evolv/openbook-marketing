@@ -6,7 +6,7 @@ export default function Footer() {
         <div className="footer-top">
           <div className="footer-brand">
             <a href="/" className="footer-brand-logo" aria-label="OpenBook">
-              <img src="/openbook-logo-transparent.png" alt="OpenBook" />
+              <img src="/brand/openbook-logo-transparent.png" alt="OpenBook" />
             </a>
             <p className="tag">The booking platform built for the AI era.</p>
           </div>
