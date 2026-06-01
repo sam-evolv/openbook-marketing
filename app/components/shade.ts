@@ -1,3 +1,13 @@
+// Subtracts a flat amount from each RGB channel. Used for the gradient
+// "darker" stop on business/app icons across the AI + consumer mockups.
+export function darken(hex: string, amount: number) {
+  const c = parseInt(hex.slice(1), 16);
+  const r = Math.max(0, ((c >> 16) & 255) - amount);
+  const g = Math.max(0, ((c >> 8) & 255) - amount);
+  const b = Math.max(0, (c & 255) - amount);
+  return '#' + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
+}
+
 export function shade(hex: string, percent: number) {
   const n = parseInt(hex.slice(1), 16);
   let r = (n >> 16) & 255;

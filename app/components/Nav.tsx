@@ -15,19 +15,22 @@ export default function Nav() {
     <nav className={'nav' + (scrolled ? ' scrolled' : '')}>
       <div className="container nav-inner">
         <a href="/" className="logo" aria-label="OpenBook">
-          <img src="/brand/ob-monogram.png" alt="" className="logo-mark" width={24} height={24} />
-          <span>OpenBook</span>
+          <img className="logo-img" src="/openbook-logo-transparent.png" alt="OpenBook" />
         </a>
         <div className="nav-links">
-          <a href="/#alongside">Works alongside</a>
-          <a href="/#ai">AI distribution</a>
-          <a href="/#features">Features</a>
-          <a href="/pricing">Pricing</a>
-          <a href="/#faq">FAQ</a>
+          <a href="#how">How it works</a>
+          <a href="#ai">AI bookings</a>
+          <a href="#features">Features</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#faq">FAQ</a>
         </div>
         <div className="nav-cta">
-          <a href="https://app.openbook.ie/onboard" className="btn-text">Sign in</a>
-          <a href="https://app.openbook.ie/onboard" className="btn btn-primary">Get started</a>
+          <a href="https://app.openbook.ie/onboard" className="btn-text">
+            Sign in
+          </a>
+          <a href="https://app.openbook.ie/onboard" className="btn btn-primary">
+            Get started
+          </a>
         </div>
       </div>
     </nav>
