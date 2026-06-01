@@ -15,7 +15,7 @@ export default function Nav() {
     <nav className={'nav' + (scrolled ? ' scrolled' : '')}>
       <div className="container nav-inner">
         <a href="/" className="logo" aria-label="OpenBook">
-          <img className="logo-img" src="/openbook-logo-transparent.png" alt="OpenBook" />
+          <img className="logo-img" src="/brand/openbook-logo-transparent.png" alt="OpenBook" />
         </a>
         <div className="nav-links">
           <a href="#how">How it works</a>

@@ -90,7 +90,7 @@ export default function StackReplace() {
           </div>
 
           <div className="quote-ob">
-            <img src="/openbook-mark.png" alt="" className="quote-ob-mark" />
+            <img src="/brand/openbook-mark.png" alt="" className="quote-ob-mark" />
             <div className="quote-ob-tag">OpenBook · all of it</div>
             <div className="quote-ob-price">
               €79<span>/mo</span>

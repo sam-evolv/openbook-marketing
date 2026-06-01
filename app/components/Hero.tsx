@@ -255,7 +255,7 @@ function HeroAI() {
             {showTool && (
               <div className="cg-tool in">
                 <div className="cg-tool-head">
-                  <img src="/openbook-mark-transparent.png" alt="" />
+                  <img src="/brand/openbook-mark-transparent.png" alt="" />
                   OpenBook
                 </div>
                 <div className="cg-tool-title">
@@ -287,7 +287,7 @@ function HeroAI() {
 
           <div className="cg-input">
             <div className="cg-input-chip">
-              <img src="/openbook-mark-transparent.png" alt="" />
+              <img src="/brand/openbook-mark-transparent.png" alt="" />
               OpenBook <span className="x">×</span>
             </div>
             <div className="cg-input-row">
